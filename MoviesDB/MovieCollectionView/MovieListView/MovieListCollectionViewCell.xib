@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MovieListCollectionViewCell" reuseIdentifier="MovieListCollectionViewCell" id="gTV-IL-0wX" customClass="MovieListCollectionViewCell" customModule="MoviesDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="285" height="350"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="285" height="350"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unnamed" translatesAutoresizingMaskIntoConstraints="NO" id="zFd-0L-jUe">
+                        <rect key="frame" x="5" y="5" width="275" height="340"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a02-0L-7za">
+                        <rect key="frame" x="249.5" y="10" width="25.5" height="22"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal">
+                            <imageReference key="image" image="suit.heart" catalog="system" symbolScale="large"/>
+                        </state>
+                        <connections>
+                            <action selector="addToFavoritesButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="hyf-RC-DBy"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oj7-hC-odu">
+                        <rect key="frame" x="10" y="10" width="50" height="24"/>
+                        <subviews>
+                            <view alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yEa-l2-XKL">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30588235294117649" green="0.039215686274509803" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AR-zQ-3d3">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="0Vf-w8-wcb"/>
+                            <constraint firstItem="3AR-zQ-3d3" firstAttribute="top" secondItem="oj7-hC-odu" secondAttribute="top" id="FBf-u3-O3G"/>
+                            <constraint firstAttribute="trailing" secondItem="3AR-zQ-3d3" secondAttribute="trailing" id="Jdi-Zx-dBU"/>
+                            <constraint firstAttribute="bottom" secondItem="3AR-zQ-3d3" secondAttribute="bottom" id="e7D-QV-ep7"/>
+                            <constraint firstAttribute="height" constant="24" id="hkn-kq-ynd"/>
+                            <constraint firstItem="3AR-zQ-3d3" firstAttribute="leading" secondItem="oj7-hC-odu" secondAttribute="leading" id="xDd-xR-aS3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zFd-0L-jUe" secondAttribute="bottom" constant="5" id="3eJ-Tw-4lC"/>
+                <constraint firstAttribute="trailing" secondItem="zFd-0L-jUe" secondAttribute="trailing" constant="5" id="4W2-iT-rEC"/>
+                <constraint firstItem="zFd-0L-jUe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="BAf-aH-wyl"/>
+                <constraint firstItem="oj7-hC-odu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="HcB-fA-AP7"/>
+                <constraint firstItem="oj7-hC-odu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Hhg-EN-dat"/>
+                <constraint firstItem="a02-0L-7za" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="SoH-Vk-xeB"/>
+                <constraint firstAttribute="trailing" secondItem="a02-0L-7za" secondAttribute="trailing" constant="10" id="bJE-jA-G53"/>
+                <constraint firstItem="zFd-0L-jUe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="lbJ-KI-kXi"/>
+                <constraint firstItem="a02-0L-7za" firstAttribute="height" secondItem="oj7-hC-odu" secondAttribute="height" multiplier="0.916667" id="m4Y-uX-SeK"/>
+            </constraints>
+            <size key="customSize" width="553" height="393"/>
+            <connections>
+                <outlet property="likeButton" destination="a02-0L-7za" id="moX-7T-TdX"/>
+                <outlet property="posterImageView" destination="zFd-0L-jUe" id="CfJ-vm-9vd"/>
+                <outlet property="ratedLabel" destination="3AR-zQ-3d3" id="PE4-nv-DCC"/>
+            </connections>
+            <point key="canvasLocation" x="502.17391304347831" y="192.1875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <image name="unnamed" width="348" height="512"/>
+    </resources>
+</document>
